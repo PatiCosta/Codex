@@ -1,0 +1,78 @@
+{% extends "layout.njk"%}
+
+{% block content %}
+
+    <div class="home-content">
+
+        <div class="publicity-gallery">
+            <div class="image-publicity-container fade">
+                <img src="publicity3.png">
+            </div>
+
+            <div class="image-publicity-container fade">
+                <img src="publicity2.png">
+            </div>
+            
+            <div class="image-publicity-container fade">
+                <img src="publicity1.png">
+            </div>
+
+            <a class="slide-left" onclick="plusSlides(-1)">
+                <i class="material-icons">
+                    chevron_left
+                </i>
+            </a>
+
+            <a class="slide-right" onclick="plusSlides(1)">
+                <i class="material-icons">
+                    chevron_right
+                </i>
+            </a>
+            <div class="dots" style="text-align:center">
+                <span class="dot" onclick="currentPublicity(1)"></span>
+                <span class="dot" onclick="currentPublicity(2)"></span>
+                <span class="dot" onclick="currentPublicity(3)"></span>
+            </div>
+        </div>
+
+        
+
+        <div class="choose-your-category">
+            <div class="horizontal-line"></div>
+
+            <div class="categories-box">
+                <a href="/">
+                    <div class="category-box">
+                        <div class="category-img">
+                            <img src="shirt.png" alt="">
+                        </div>
+                        <div class="category-text">
+                            <p>Shirts</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="category-box">
+                        <div class="category-img">
+                            <img src="tattoo.png" alt="">
+                        </div>
+                        <div class="category-text">
+                            <p>Tattoos</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="category-box">
+                        <div class="category-img">
+                            <img src="print.png" alt="">
+                        </div>
+                        <div class="category-text">
+                            <p>Prints</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

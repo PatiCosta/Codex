@@ -1,0 +1,154 @@
+{% extends "layout.njk"%}
+
+{% block content %}
+
+<div class="tattoo-schedule-container">
+    <div class="tattoo-gallery">
+        <div class="tattoo-photo">
+            <img src="tattoo.png" alt="">
+        </div>
+        <div class="tattoo-photo">
+            <img src="tattoo1.png" alt="">
+        </div>
+        <div class="tattoo-photo">
+            <img src="tattoo2.png" alt="">
+        </div>
+        <div class="tattoo-photo">
+            <img src="tattoo3.png" alt="">
+        </div>
+        <div class="tattoo-photo">
+            <img src="tattoo2.png" alt="">
+        </div>
+        <div class="tattoo-photo">
+            <img src="tattoo1.png" alt="">
+        </div>
+    </div>
+    <div class="tattoo-form">
+        <div class="horizontal-line"></div>
+        <div class="title">
+            <h2>Oi! que bom te ver por aqui :)</h2>
+        </div>
+        <div class="description">
+            <p>Fico feliz que tenha decidido fazer sua tattoo comigo! Preciso que você preencha algumas informações abaixo para que eu possa ter uma boa noção do que você deseja, ok? Depois que enviar, vou analisar certinho sua ideia e entro em contato com você por e-mail! </p>
+        </div>
+        <div class="horizontal-line"></div>
+
+        <form action="/">
+            <div class="input-field col s12">
+                <input type="text" name="name" id="name">
+                <label for="name">Nome completo</label>
+            </div>
+
+            <div class="input-block">
+                <div class="input-field col s12">
+                    <input id="email" type="email">
+                    <label for="email">Email</label>
+                </div>
+            
+
+                <div class="input-field col s12">
+                    <input type="tel" name="phone" id="phone">
+                    <label for="phone">Telefone</label>
+                </div>
+            </div>
+
+            <div class="input-block">
+                <div class="input-field col s12">
+                    <input type="text" name="bodyLocation" id="bodyLocation">
+                    <label for="bodyLocation">Local do corpo</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <input type="text" name="size" id="size">
+                    <label for="size">Tamanho aproximado (em cm)</label>
+                </div>
+                
+            </div>
+
+
+            <div class="file-field input-field">
+                <div class="btn red darken-4">
+                    <span>Local do corpo</span>
+                    <input type="file" multiple>
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Imagens do local do corpo">
+                </div>
+            </div>
+
+            <div class="input-field col s12">
+                <textarea id="tattooDescription" class="materialize-textarea"></textarea>
+                <label for="tattooDescription">Descreva sua ideia!</label>
+            </div>
+
+
+            <h4>Tem disponibilidade de vir ao estúdio conversar pessoalmente caso precise?</h4>
+
+            <div class="radios-container">
+
+                <p>
+                <label>
+                    <input name="group1" type="radio" checked />
+                    <span>Sim</span>
+                </label>
+                </p>
+                <p>
+                <label>
+                    <input name="group1" type="radio" />
+                    <span>Não</span>
+                </label>
+                </p>
+
+            </div>
+
+
+            <div class="input-field col s12">
+                <div class="input-title">
+                    <h4>Adicione aqui os dias e horários que você tem disponível!</h4>
+                    <a class="waves-effect waves-teal btn-flat "><i class="material-icons">add</i>Novo dia e horário</a>
+                </div>
+                <div class="select-content">
+                        {# <select name="day" id="day" placeholder="Escolha o dia">
+                            <option value="monday">Segunda-feira</option>
+                            <option value="tuesday">Terça-feira</option>
+                            <option value="wednesday">Quarta-feira</option>
+                            <option value="thursday">Quinta-feira</option>
+                            <option value="friday">Sexta-feira</option>
+                            <option value="saturday">Sábado</option>
+                            <option value="sunday">Domingo</option>
+                        </select> #}
+
+                        <div class="input-field col s12">
+                            <input type="text" name="weekDay" id="weekDay">
+                            <label for="weekDay">Dia da semana</label>
+                        </div>
+
+                        <div class="input-time">
+                            <p>Das</p> 
+                            <input type="time" name="initialTime" id="initialTime">
+                        </div>
+                        <div class="input-time">
+                            <p>Até</p> 
+                            <input type="time" name="finalTime" id="finalTime">
+                        </div>
+                </div>
+            </div>
+
+            <div class="file-field input-field">
+                <div class="btn red darken-4">
+                    <span>Referências</span>
+                    <input type="file" multiple>
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Imagens de referência para sua ideia">
+                </div>
+            </div>
+
+            <button class="btn waves-effect waves-light red darken-4" type="submit" name="action">Enviar
+                <i class="material-icons right">email</i>
+            </button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    border: none;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+/* HEADER */
+
+header {
+    height: 54vh;
+    border: 1px solid transparent;
+
+    background-image: url('background.PNG');
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+
+    margin: 2% 4%;
+}
+
+
+/* LINKS TO CATEGORIES */
+
+.links-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+}
+
+.links-categories a{
+    color: #f9f9f9;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    transition: opacity 0.2s;
+    opacity: 0.6;
+
+    position: relative;
+    z-index: 0;
+}
+
+.links-categories a:hover{
+    opacity: 1;
+}
+
+.links-categories a::after {
+    content:"";
+    width: 0;
+    height: 1px;
+    background-color: #f9f9f9;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+.links-categories a:hover::after {
+    width: 80%;
+    transition: width 400ms ease;
+    color: #f9f9f9;
+}
+
+/* LOGO */
+
+.logo {
+    position: relative;
+}
+
+.logo img {
+    position: absolute;
+
+    width: 100%;
+    top: -50%;
+    z-index: 2;
+}
+
+/* SEARCH AND ACCOUNT LINKS */
+
+.search-and-account-links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.search-and-account-links a{
+    color: #f9f9f9;
+    opacity: 0.6;
+
+    padding: 0 1%;
+        
+    transition: opacity 0.2s;
+}
+
+.search-and-account-links a:hover{
+    opacity: 1;
+}
+
+.search-and-account-links a i.material-icons{
+    font-size: 28px;
+}
+
+.search-and-account-links form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 60%;
+
+    padding: 0 2%;
+}
+
+.search-and-account-links form button i.material-icons {
+    font-size: 28px;
+}
+
+.search-and-account-links form input {
+    width: 65%;
+    margin-left: 1%;
+
+    background: none;
+    border-bottom: 1px solid #f9f9f99c;
+
+    transition: 0.2s;
+}
+
+.search-and-account-links form input:read-write {
+    color: #f9f9f9;
+}
+
+.search-and-account-links form input:focus {
+    outline: none;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.search-and-account-links form button {
+    background: none;
+    color: #f9f9f9;
+    opacity: 0.6;
+
+    transition: 0.2s;
+}
+
+.search-and-account-links form button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    bottom: -35vh;
+
+    height: 15%;
+    width: 100%;
+}
+
+.footer-info,
+.footer-info div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.footer-info div p,
+.footer-info div i {
+    font-size: small;
+    color: rgb(73, 71, 71);
+    padding: 0 2px;
+    letter-spacing: 0.2px;
+}
+
+.footer-cards {
+    margin-top: 1%;
+    padding: 2% 8% 1% 8%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    background-image: url('background.PNG');
+}
+
+.footer-card {
+    height: 100%;
+}
+
+.footer-card h2{
+    font-size: medium;
+    color: #f9f9f9;
+    opacity: 0.7;
+    letter-spacing: 0.4px;
+    padding: 0 8px;
+}
+
+.footer-card .footer-card-line {
+    height: 1px;
+    width: 60%;
+    background-color: #f9f9f9;
+
+    margin-bottom: 12px;
+}
+
+.footer-card .footer-card-content{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    padding: 1px 4px;
+}
+
+.footer-card .footer-card-content img {
+    height: 15px;
+    width: 15px;
+
+    margin-bottom: 6px;
+}
+
+.footer-card p,
+.footer-card a{
+    color: #f9f9f9;
+    opacity: 0.7;
+    font-size: small;
+
+    padding-left: 4px;
+    padding-bottom: 4px;
+
+    transition: 0.5s;
+}
+
+
+.footer-card a:hover {
+    opacity: 1;
+
+}
+
+.footer-card .material-icons {
+    color: #f9f9f9;
+    opacity: 0.7;
+    font-size: medium;
+    padding-bottom: 6px;
+}
+
+
+/* HOME CONTENT */
+
+.home-content {
+    margin: -20% 4%;
+    width: 92%;
+}
+
+/* PUBLICITY GALLERY */
+
+.publicity-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    background-color: rgb(56, 54, 54);
+}
+
+.publicity-gallery .slide-left,
+.publicity-gallery .slide-right {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 68px;
+    height: 48px;
+
+    background-color: red;
+
+    position: absolute;
+
+    transition: 0.6s ease;
+    border-radius: 1px;
+    user-select: none;
+    cursor: pointer;
+
+}
+
+.publicity-gallery .slide-right {
+    right: -2.5%;
+}
+
+.publicity-gallery .slide-left {
+    left: -2.5%;
+}
+
+.publicity-gallery .slide-left i.material-icons,
+.publicity-gallery .slide-right i.material-icons {
+    font-size: 36px;
+    color: white;
+}
+
+.slide-left:hover, .slide-right:hover {
+    background-color: rgb(187, 0, 0);
+}
+
+.image-publicity-container {
+    width: 92vw;
+    height: 80vh;
+
+    box-sizing: border-box;
+
+    display: none;
+}
+
+.dots {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot, .dot:hover {
+    background-color: #717171;
+}
+
+.publicity-gallery img {
+    z-index: 0;
+
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+} 
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .5}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .5}
+    to {opacity: 1}
+} 
+
+/* CHOOSE YOUR CATEGORY */
+
+.choose-your-category {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 3%;
+}
+
+.choose-your-category h2 {
+    padding: 8px 0;
+    margin: 0 auto;
+
+    color: rgb(56, 54, 54);
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 3px;
+
+    background-color: rgb(56, 54, 54);
+}
+
+.choose-your-category .categories-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.category-box {
+
+    height: 60vh;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.category-box .category-img {
+    height: 90%;
+    width: 90%;
+
+    overflow: hidden;
+}
+
+
+.category-box .category-img img{
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+}
+
+.category-box .category-img:hover img{
+    transform: scale(1.05);
+}
+
+
+.category-box .category-text {    
+    background-color: rgb(56, 54, 54);
+    border: 1px solid #f9f9f9;
+
+    position: absolute;
+    bottom: 10%;
+    left: 70%;
+
+    padding: 2%;
+
+    transition: .5s ease;
+
+}
+
+.category-box .category-text p{
+    color: #f9f9f9;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition: .5s ease;
+
+}
+
+.category-box:hover .category-text {
+    background-color: #f9f9f9;
+    border: 1px solid rgb(56, 54, 54);
+}
+
+.category-box:hover .category-text p {
+    color: rgb(56, 54, 54);
+}
+
+/* Tattoo Schedule */
+
+.tattoo-schedule-container {
+    display: flex;
+    flex-direction: column;
+
+    margin: -14% 4% 0 4%;
+
+}
+
+/* TATTOO GALLERY */
+
+.tattoo-schedule-container .tattoo-gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+
+    box-sizing: border-box;
+
+    margin-bottom: 4%;
+}
+
+.tattoo-schedule-container .tattoo-gallery img {
+    height: 10rem;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+/* TITLE AND DESCRIPTION */
+
+.tattoo-schedule-container .tattoo-form{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.tattoo-schedule-container .tattoo-form .title h2{
+    color: rgb(78, 75, 75);
+
+    padding: 8% 0;
+    margin: 0;
+
+    line-height: 19px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.tattoo-schedule-container .tattoo-form .description {
+    color: #717171;
+
+    font-size: 14px;
+    line-height: 18px;
+    padding: 2%;
+
+    width: 80%;
+}
+
+.tattoo-schedule-container .tattoo-form form {
+    width: 76%;
+
+    margin-bottom: 5%;
+    margin-top: 5%;
+
+    position: relative;
+}
+
+.tattoo-schedule-container .tattoo-form form .input-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.input-block .input-field {
+    width: 44%;
+    margin-left: 0;
+
+}
+
+.tattoo-form form .radios-container {
+    display: grid;
+    grid-template-columns: repeat(2, 8%);
+    align-content: center;
+    justify-items: start;
+}
+
+.tattoo-form form h4 {
+    color: #9e9e9e;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.tattoo-form form .input-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.tattoo-form form .input-title a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(170, 0, 0);
+    font-size: smaller;
+}
+
+.tattoo-form form .select-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+
+    width: 70%;
+
+    gap: 5px;
+}
+
+.tattoo-form form .select-content .input-time {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+
+    align-self: center;
+}
+
+.tattoo-form form .select-content .input-time p {
+    align-self: center;
+    justify-self: center;
+
+    color: #717171;
+}
+
+.tattoo-form form button {
+    position: absolute;
+
+    right: 0;
+}
+
